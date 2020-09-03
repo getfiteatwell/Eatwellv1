@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <meta name="description" content="All about meta tags and how to add them to your website.">
+		  <meta name="author" content="Pragmatic Mates s.r.o. - http://pragmaticmates.com">
+		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		  <title> Sign UP</title>
+
+		<!-- CSS here -->
+		  <link rel="shortcut icon" type="image/x-icon" href="#">
+		  <link rel="stylesheet" href="/static/css/fontawesome-all.min.css">
+		  <link rel="stylesheet" href="/static/css/normalize.css">
+		  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+		  <link rel="stylesheet" href="/static/css/style.css">
+		  
+		  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><!--Animation js here-->
+		 
+	</head>
+    <body>
+	
+	<!--===Header Start===-->
+	<header id="signup-header-section">
+			<div class="container-fluid">
+					<div class="row mb-2">
+							<div class="col text-center">
+									<div class="login-logo d-inline-block">
+											<img src="/static/img/logo.png" class="w-100 " alt="logo" />
+									</div>
+							</div>
+					</div>
+					<div class="row ">
+							<div class="col-12 col-md"><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_9qqzSo.json" background="transparent"  speed="1"  style="width: 100%; height: 100%;" loop controls autoplay></lottie-player></div>
+							<div class="col-12 mt-5 mt-md-0 col-md m-auto d-flex justify-content-center">
+									<div class="card text-center mb-5" style="width: 20rem;">
+									  <div class="card-body">
+                                        <h5 class="card-title text-dark font-weight-bold mb-3">SIGN UP</h5>
+                                        <script type="text/javascript" src="/static/js/validator.signup.js"></script>
+										<form id="signup_form" action="/signup" method="POST">
+                                                <input name="fname" type="text" placeholder="First Name" onblur="validate_fname(this)" />
+                                                <small id="validate-fname"></small>
+                                                <input name="lname" type="text" placeholder="Last Name" onblur="validate_lname(this)" />
+                                                <small id="validate-lname"></small>
+                                                <input name="email" type="text" placeholder="Email" onblur="validate_email(this)" />
+                                                <small id="validate-email"></small>
+                                                <input name="phone" type="number" placeholder="Mobile Number" onblur="validate_phone(this)" />
+                                                <small id="validate-phone"></small>
+                                                <input id="password" name="password" type="password" placeholder="Password" onblur="validate_password(this)" />
+                                                <small id="validate-password"></small>
+                                                <input name="confirmpassword" type="password" placeholder="Confirm Password" onblur="validate_confirmpassword(this)" />
+                                                <small id="validate-cpass"></small>
+                                                <input name="termscheck" type="checkbox" name="vehicle1" value="true"><span> I agree to the <a href="#"> term of conditions</a></span>
+                                                <small id="validate-terms"></small>
+                                                
+                                                <button onclick="Validate_signup()" class="btn btn-outline-primary signuppage-sign-fb mb-2 d-block mt-3">Sign Up</button> <br />
+										        <span class="d-block  text-dark or">or</span>
+                                        </form>
+                                        <script type="text/javascript" src="/static/js/social.media.auth.js"></script>
+										<a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78kthceuu73gx9&redirect_uri=http%3A%2F%2F3.129.248.142%2Fsocialmedialogin%2Flinkedin&state=fooobar&scope=r_basicprofile%20r_primarycontact%20w_member_social" class="btn btn-outline-primary signuppage-sign-fb mb-2 d-block">Login With Linkedin</a> <br />
+										<a href="#" class="btn btn-outline-primary signuppage-sign-goo mb-4 d-block">Login With Google</a> <br />
+									
+									<span>Already have an account?</span> <a href="/login" class="text-light signup-login-color">Login</a>
+									  </div>
+									</div>
+							</div>
+					</div>
+			</div>
+	</header>
+	
+	
+	 <!--===Header End===-->
+	
+		<!--===Footer Section Start===-->
+			<footer id="footer">
+					<div class="container-fluid">
+							<div class="row">
+									<div class="col-12 col-lg text-center">
+											<img src="/static/img/logo.png" class="footer-logo " alt="footer-logo" />
+											<p class='ml-0 ml-lg-5  text-light'>Learn new recipes and kitchen <br /> skill to up your cooking game.</p>
+									</div>
+
+									<div class="col-12 col-lg ml-0 ml-lg-5 pl-0 pl-lg-5 text-center">
+										<ul class="mt-5">
+											<li><a href="#">Pages</a></li>
+											<li><a href="/signup">Sign up</a></li>
+											<li><a href="/login">Login</a></li>
+											<li><a href="#">About Us</a></li>
+											<li><a href="#">Contact Us</a></li>
+										</ul>
+									</div>
+									<div class="col-12 col-lg mt-5 ml-0 ml-lg-5 pl-0 pl-lg-5  text-center">
+											<p class="text-light">Social Link</p>
+											<div class="social-icon">
+												<a href="#"><i class="fab fa-facebook-f"></i></a>
+												<a href="#"><i class="fab fa-twitter"></i></a>
+												<a href="#"><i class="fab fa-instagram"></i></a>
+											</div>
+
+											<a href="#"><img src="/static/img/white-appstore.png" class="white-appstore mt-3" alt="white-appstore" /></a>
+											
+											
+									</div>
+							</div>
+					</div>
+			</footer>
+	 <!--===Footer Section End===-->
+	<!-- JS here -->
+	   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	   <script src="/static/js/owl.carousel.min.js"></script>
+        <script src="/static/js/popper.min.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+		
+    </body>
+</html>

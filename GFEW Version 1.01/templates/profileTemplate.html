@@ -1,0 +1,392 @@
+<html>
+
+<head>
+    <title>GFEW</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/css/custom.css" />
+    <link rel="stylesheet" href="/static/css/responsive.css" />
+
+    <link rel="icon" href="/static/images/fav-icon.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">
+                <img src="images/logo.png">
+            </a> -->
+            <div class="navbar-brand">
+                <div class="form-group">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <span class="search-icon"><!--<img src="/static/images/menu.svg">--></span>
+                </div>
+            </div>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                  <!--<img src="/static/images/toggle.svg" />-->
+              </span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('wall', id=id) }}">Wall</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('class_list', id=id) }}">Classes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-img-block" href="#"><span class="nav-img"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="profile-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div id="profileholder" class="col-md-10 col-10 profile-info">
+                            <!--<div class="profile-card">
+                                <img src="images/profile-img.png">
+                                <h2>Jacques Laventure</h2>
+                                <p>Vegan Chef</p>
+                                <ul>
+                                    <li>25 <br><span>Meals</span></li>
+                                    <li>2.4K <br><span>Followers</span></li>
+                                    <li>239 <br><span>Follows</span></li>
+                                </ul>
+                            </div>
+                            <div class="reffered-friend">
+                                <p>Friends Referred</p>
+                                <ul>
+                                    <li><img src="/static/images/client1.jpg"></li>
+                                    <li><img src="/static/images/client1.jpg"></li>
+                                    <li><img src="/static/images/client1.jpg"></li>
+                                    <li><img src="/static/images/client1.jpg"></li>
+                                </ul>
+                            </div>-->
+                        </div>
+                        <div class="col-md-2 col-2 setting-icon">
+                            <!--<img src="/static/images/settings.svg">-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-heading">
+                                <h2>Fun way to Learn to Cook and eat Healthy</h2>
+                                <div class="class-btn col-md-8">
+                                    <a href="#">Take a class</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="level" class="beginner-card">
+                                <ul>
+                                    <li class="active">Beginner</li>
+                                    <li>Intermediate</li>
+                                    <li>Professional</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <!--<div class="chart-card">
+                                <p>Progress</p>
+                                <canvas id="myChart"></canvas>
+                            </div>-->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="notification-card">
+                                <h4 class="day">Today</h4>
+                                <div id="not_buffer"></div>
+                                <!--<p> <span class="circle-green"><img src="/static/images/tick.svg"></span><strong>Darika Samak</strong> mark as done <strong>Listing on Product Hunt</strong> <br> <span>8:40AM</span></p>
+
+                                <p> <span class="circle-orange"><img src="/static/images/chat.svg"></span><strong>Emilee Simchenko</strong> Commented on  <strong>Account of teams and personal in bottom style</strong> <br> <span>7:32PM</span></p>
+
+                                <p> <span class="circle-blue"><img src="/static/images/download.svg"></span><strong>Darika Samak</strong> upload 4 files on  <strong>An option to search in current projects or in hall</strong> <br> <span>6:02PM</span> <br> 
+                                <ul class="image-gallery">
+                                    <li><img src="/static/images/admin-login.jpg"></li>
+                                    <li><img src="/static/images/admin-login.jpg"></li>
+                                    <li><img src="/static/images/admin-login.jpg"></li>
+                                </ul>
+                                </p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="badges-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="badges-heading">
+                        <h2>Badges</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="badges-blue">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="badges-green">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="badges-purple">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="discussion-card">
+                        <h3 class="discussion-heading">Feed</h3>
+                        <div id="makePost" class="row">
+                            <div class="col-md-2 col-2">
+                                <div class="user-img">
+                                    <img src="/static/images/client1.jpg">
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-8">
+                                <div class="form-group">
+                                    <input id="postBox" type="text" class="comment-feild" placeholder="Add a Post...">
+                                </div>
+                            </div>
+                            <button id="postbtn" class="col-md-2 col-2 btn btn-danger"></button>
+                        </div>
+                        <div id="post_buffer"></div>
+                        <!--<div class="discussion-comment">
+                            <p class="user-name"><strong>Helena Brauer</strong>, Designer<span>Yesterday at 12:37pm</span></p>
+                            <p>During a project build it is necessary to evaluate the product design and development against project requirement and outcomes</p>
+                            <img src="images/client1.jpg">
+                        </div>
+
+                        <div class="discussion-comment">
+                            <p class="user-name"><strong>Helena Brauer</strong>, Designer<span>Yesterday at 12:37pm</span></p>
+                            <p><span class="tag">@helena</span> Software quality assurance activity in which one or several humans check a program mainly</p>
+                            <img src="images/client1.jpg">
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="task-board" style="overflow-y: scroll;">
+                        <h2>Cooking Log <a id="taskcl">+ Add Task</a></h2>
+                        <div id="cookingLog"></div>
+                        <!--<div class="task-card">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+                                    <label for="fruit1"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>Cooked Carrot Soup</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><span class="pill pill-orange">Student</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-card bg-orange">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit2" name="fruit-2" value="Apple">
+                                    <label for="fruit2"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>Practice Making Quinoa Burger</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><span class="pill pill-purple">Me</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-card">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit3" name="fruit-3" value="Apple">
+                                    <label for="fruit3"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>B</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><img src="images/client1.jpg"><span class="pill pill-blue">Team</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="badges-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <!--<div class="review-card">
+                        <h2>Reviews</h2>
+                        <ul>
+                            <li>
+                                <span class="start-round"><i class="fa fa-star"></i></span>
+                                <h4>Rating</h4>
+                                <p>Your opinion matters! Rate recipes, instructions and friends recipes.</p>
+                            </li>
+                            <li>
+                                <p class="five-star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+                                </p>
+                                <p><img src="images/start-grey.svg">4 stars from 15 reviews</p>
+                                <p><img src="images/price.svg">78% Compleletion rate</p>
+                                <p><img src="images/brief-case.svg">32 Complited tasks</p>
+                            </li>
+                        </ul>
+                    </div>-->
+                </div>
+                <div class="col-md-4">
+                    <div class="profile-section">
+                        <!--<div class="notification-card">
+                            <h4 class="day">Today</h4>
+                            <p> <span class="circle-green"><img src="images/tick.svg"></span><strong>Darika Samak</strong> mark as done <strong>Listing on Product Hunt</strong> <br> <span>8:40AM</span></p>
+
+                            <p> <span class="circle-orange"><img src="images/chat.svg"></span><strong>Emilee Simchenko</strong> Commented on  <strong>Account of teams and personal in bottom style</strong> <br> <span>7:32PM</span></p>
+
+                            <p> <span class="circle-blue"><img src="images/download.svg"></span><strong>Darika Samak</strong> upload 4 files on  <strong>An option to search in current projects or in hall</strong> <br> <span>6:02PM</span> <br> 
+                            </p><ul class="image-gallery">
+                                <li><img src="images/admin-login.jpg"></li>
+                                <li><img src="images/admin-login.jpg"></li>
+                                <li><img src="images/admin-login.jpg"></li>
+                            </ul>
+                            <p></p>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="task-board" style="overflow-y: scroll;">
+                        <h2>To Do <a id="tasktodo">+ Add Task</a></h2>
+                        <div id="toDo"></div>
+                        <!--<div class="task-card">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit4" name="fruit-4" value="Apple">
+                                    <label for="fruit4"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>Find top 5 student and ask for referrals</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><span class="pill pill-blue">Me</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-card">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit5" name="fruit-5" value="Apple">
+                                    <label for="fruit5"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>Buy a ninja Air fryer</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><span class="pill pill-purple">Me</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="task-card">
+                            <div class="row">
+                                <div class="col-md-2 col-2">
+                                    <input type="checkbox" id="fruit6" name="fruit-6" value="Apple">
+                                    <label for="fruit6"></label>
+                                </div>
+                                <div class="col-md-10 col-10">
+                                    <p>Listing on Product Hunt so that we can reach many usres</p>
+                                    <div class="user-type">
+                                        <img src="images/client1.jpg"><img src="images/client1.jpg"><span class="pill pill-blue">Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- js files -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+
+
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Jan",	"Feb",	"Mar",	"April"],
+                    datasets: [{
+                        label: 'Series 1', // Name the series
+                        data: [1,	3,	4,	5,	5], // Specify the data values array
+                        fill: false,
+                        borderColor: '#FFB901', // Add custom color border (Line)
+                        backgroundColor: 'transparent', // Add custom color background (Points and Fill)
+                        borderWidth: 1 // Specify bar border width
+                    }]},
+                options: {
+                responsive: true, // Instruct chart js to respond nicely.
+                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+                }
+            });
+    </script>
+    <script type="text/javascript" src="/static/js/renderer.js"></script>
+    <script type="text/javascript" src="/static/js/requests.js"></script>
+    <!--<script>
+        profile_get();
+        notification_update("self");
+
+        var btn = document.getElementById("postbtn");
+        btn.addEventListener("click", function() {
+        createPost(document.getElementById("postBox").value);
+        document.getElementById("postBox").value = "";
+        });
+
+        document.getElementById("taskcl").setAttribute("href", window.location.href + "/tasks/create");
+        document.getElementById("tasktodo").setAttribute("href", window.location.href + "/tasks/create");
+    </script>-->
+    <script type="text/javascript" src="/static/js/profile.load.js"></script>
+</body>
+</html>

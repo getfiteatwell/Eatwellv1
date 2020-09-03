@@ -1,0 +1,515 @@
+
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../fonts/BebasNeue-Regular.eot");
+}
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../fonts/BebasNeue-Regular.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../fonts/BebasNeue-Regular.woff");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "BebasNeue-Regular";
+    src: url("../fonts/BebasNeue-Regular.woff2");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap')
+/*Fonts*/
+
+body {
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    background: url(../img/background.jpg) repeat;
+    background-size: cover;
+}
+
+.fix {
+	overflow: hidden
+}
+a,
+.button {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+	color: #2B96CC;
+	text-decoration: none;
+}
+a,
+button {
+	color: #1696e7;
+	outline: medium none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Lato', sans-serif;
+	text-transform: normal;
+	color: #306146!important;
+	font-style: normal;
+	 margin-bottom: 0!important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+p{
+	font-size:20px!important;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.separator {
+	border-top: 1px solid #f2f2f2
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: #1696e7 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 2px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.toolbar{display:none!important}
+
+
+/* Index Page CSS */
+#header-section{
+	background:#15B769;
+	min-height:100vh;
+}
+.navbar-brand{
+	width:250px;
+	height:150px;
+	margin-left:-40px;
+}
+header .btn.signup {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 30px;
+    border: 1px solid #fff;
+	padding: 8px 25px;
+	font-size:12px;
+	margin-top:5px;
+}
+header .btn {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 8px 11px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#work{
+	background:url(../img/how-it-works-bg.jpg) no-repeat;
+	background-size:cover;
+	min-height:100vh;
+}
+#work .team-build-wrapper {
+    margin-top: 10rem!important;
+    border: 2px solid #36d339;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 12px;
+    text-transform: uppercase;
+}
+#work .team-build-wrapper {
+    margin-top: 10rem!important;
+    border: 2px solid #36d339;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 12px;
+}
+#work .heading-1 {
+    color: #000!important;
+    font-weight: 900;
+	position:relative;
+}
+#work .heading-1::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    top: 50px;
+    left: 85px;
+    color: #36d339;
+    background: #36d339;
+}
+#work .reg {
+    width: 300px;
+    height: auto;
+    display: inline-block;
+
+}
+#work .team-build-wrapper span {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+#country{
+	background:#EDEDED;
+}
+.card{
+	background:#98DBA9!important;
+}
+
+/* Login Page CSS */
+#login-header-section{
+	background:#15B769;
+	min-height:600px;
+}
+#login-header-section .login-logo{
+	width:250px;
+	height:150px;
+}
+#login-header-section .loginpage-login.btn {
+    padding: 8px 95px;
+}
+
+#login-header-section .loginpage-login-fb {
+    padding: 8px 40px;
+}
+#login-header-section .loginpage-login-goo {
+    padding: 8px 48px;
+}
+#login-header-section input {
+    padding-right: 50px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+
+
+#login-header-section ::placeholder{
+	color:#fff;
+}
+.forget-pass{
+	margin-left:6rem!important;
+}
+/* Sign UP Page CSS */
+#signup-header-section{
+	background:#15B769;
+	min-height:600px;
+}
+#signup-header-section .login-logo {
+    width: 250px;
+    height: 150px;
+}
+#signup-header-section .card {
+	background:#C9F1D4!important;
+}
+#signup-header-section ::placeholder{
+	color:#000;
+}
+#signup-header-section input[type="text"], input[type="number"], input[type="password"] {
+    padding-right: 100px;
+    border: none;
+    border-bottom: 1px solid #29A869;
+    background: transparent;
+    margin: 8px 0;
+}
+#signup-header-section input[type="checkbox"] {
+    margin-left: -25px;
+}
+#signup-header-section .sign-up {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 30px;
+    border: 1px solid #66C693;
+    padding: 5px 60px;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #66C693!important;
+}
+#signup-header-section .signuppage-sign-fb{
+	  border: 1px solid #66C693;
+	   color: #66C693!important;
+}
+#signup-header-section .signuppage-sign-goo {
+    border: 1px solid #66C693;
+    color: #66C693!important;
+    margin-top: -5px;
+}
+#signup-header-section .signup-login-color{
+		color: #66C693!important;
+}
+#signup-header-section .or {
+    margin-top: -30px;
+}
+
+/* Slider Page CSS */
+
+.slider a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 10px 80px;
+    /* margin-top: 0; */
+    display: -webkit-box;
+}
+.slider .mark {
+    background: #fff;
+    color: #000!important;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+    background: transparent;
+    color: #000;
+    border: 1px solid #fff;
+    padding: 1px 7px!important;
+    font: inherit;
+    margin: 15px;
+    border-radius: 2px;
+}
+.owl-dots {
+    text-align: center;
+}
+button.owl-dot.active {
+    background: #fff;
+}
+
+/* Congratulations Page CSS */
+#congratulations-section{
+	background:#15B769;
+	min-height:600px;
+}
+#congratulations-section .login-logo{
+	width:250px;
+	height:150px;
+}
+
+#congratulations-section .continue-btn {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+
+
+
+
+/*Media Queries*/
+
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px)  {
+			#footer .footer-logo {
+    width: 250px;
+    height: 150px;
+    margin-left: -120px;
+}
+
+			
+}
+#pricing .btn.signup {
+    background: transparent none repeat scroll 0 0;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 8px 8px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.appstore {
+    width: 130px;
+    height: 50px;
+}
+#signup{
+	background:#98DBA9;
+}
+#signup .btn.signup {
+    background: #295940 none repeat scroll 0 0;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 8px 8px;
+    font-size: 12px;
+    margin-top: 5px;.
+
+}
+#footer{
+	background:#295940;
+}
+#footer .footer-logo{
+	width:250px;
+	height:150px;
+}
+#footer ul li a{
+	color:#fff;
+}
+#footer .white-appstore {
+    width: 100px;
+    height: 40px;
+}
+ i.fab {
+    background: transparent;
+    color: #fff;
+    margin: 10px;
+	cursor:pointer;
+}
+ 
+ 
+ 
+ 
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	
+		
+	}
+
+ 
+/* small mobile :320px. */
+@media (max-width: 991px) {
+
+	p {
+    font-size: 15px!important;
+	}
+	.span{
+		font-size:1.5rem;
+	}
+	h1{
+		font-size:1.5rem;
+	}
+	h2{
+		font-size:1.5rem;
+	}
+	.log {
+    margin-left: 44px;
+	}
+	#work{
+	background:none;
+	
+	}
+	#work .heading-1::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 5px;
+    top: 35px;
+    left: 50px;
+    color: #36d339;
+    background: #36d339;
+	}
+ 
+}
+ 
+/* Large Mobile :480px. */
+@media (min-width: 350px) and (max-width: 575px) {
+		
+	.hide{display:none!important}
+		
+		
+}
+/* Time countdown :480px. */
+@media(max-width: 1199px) {
+	#work {
+    background: none;	}
+
+	}
