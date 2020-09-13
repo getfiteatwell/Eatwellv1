@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="http://localhost:5000/static/API.js"></script>
+
+    <div id="auth-get">
+        <h1>GET AUTH</h1>
+        <script>
+            function send_auth_get()
+            {
+                var username = document.getElementById("auth-text-get").value;
+                auth_get(username);
+            }
+        </script>
+        <input id="auth-text-get" type="text" placeholder="auth text" />
+        <button id="auth-btn-get" onclick="send_auth_get()">auth</button>
+    </div>
+
+    <div id="get">
+        <h1>GET</h1>
+        <input id="get-text" type="text" placeholder="get text" />
+        <input id="query-get" type="text" placeholder="query" />
+        <input id="endpoint-get" type="text" placeholder="endpoint" />
+    </div>
+
+
+
+    <div id="auth-post">
+        <h1>POST AUTH</h1>
+        <script>
+            function send_auth_post()
+            {
+                var username = document.getElementById("auth-text-post").value;
+                auth_post(username);
+            }
+        </script>
+        <input id="auth-text-post" type="text" placeholder="auth text" />
+        <button id="auth-btn-post" onclick="send_auth_post()">auth</button>
+    </div>
+
+    <div id="post">
+        <h1>POST</h1>
+        <input id="post-text" type="text" placeholder="post text" />
+        <input id="query-post" type="text" placeholder="query" />
+        <input id="endpoint-post" type="text" placeholder="endpoint" />
+        <input id="title" type="text" placeholder="title"/>
+        <input id="description" type="text" placeholder="description"/>
+        <input id="due_date" type="datetime-local" placeholder="due date"/>
+        <input id="text" type="text" placeholder="text"/>
+        <input id="media" type="text" placeholder="media"/>
+    </div>
+</body>
+</html>
